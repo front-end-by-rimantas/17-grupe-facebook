@@ -1,0 +1,101 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr 250px;
+    grid-template-areas:
+        "header header header"
+        "menu content messenger"
+        "footer footer footer";
+}
+
+header {
+    grid-area: header;
+    padding: 10px;
+    background-color: #36f;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.menu {
+    grid-area: menu;
+    padding: 10px;
+    background-color: #eee;
+}
+.messenger {
+    grid-area: messenger;
+    padding: 10px;
+    background-color: #ddd;
+}
+footer {
+    grid-area: footer;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+img {
+    width: 300px;
+}
+
+.feed {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: minmax(300px, 500px);
+    gap: 40px 20px;
+    padding: 80px 40px;
+}
+    .feed > .post {
+        border: 10px solid red;
+    }
+        .feed > .post > .post-header {
+
+        }
+            .feed .post-header > .user-profile-photo {
+
+            }
+                .feed .user-profile-photo > img {
+
+                }
+            .feed .post-header > .user-details {
+
+            }
+                .feed .user-details > .author {
+
+                }
+                    .feed .user-details .link {
+
+                    }
+                .feed .user-details > .time {
+
+                }
+            .feed .post-header > .post-actions {
+
+            }
+        .feed > .post > .post-content {
+
+        }
+        .feed > .post > .post-footer {
+
+        }
+
+@media (max-width: 800px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "menu"
+            "content"
+            "messenger"
+            "footer";
+    }
+}
