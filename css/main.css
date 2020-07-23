@@ -55,38 +55,54 @@ img {
     padding: 80px 40px;
 }
     .feed > .post {
-        border: 10px solid red;
+        border: 1px solid #ccc;
     }
         .feed > .post > .post-header {
-
+            display: grid;
+            grid-template-columns: 70px 1fr 30px;
+            grid-template-areas: "authorPhoto authorDetails authorActions";
         }
             .feed .post-header > .user-profile-photo {
-
+                grid-area: authorPhoto;
+                padding: 10px;
             }
                 .feed .user-profile-photo > img {
-
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                    border-radius: 50%;
                 }
             .feed .post-header > .user-details {
-
+                grid-area: authorDetails;
+                padding: 10px 0;
             }
                 .feed .user-details > .author {
-
+                    margin-bottom: 10px;
+                    line-height: 25px;
+                    font-size: 18px;
                 }
                     .feed .user-details .link {
-
+                        line-height: inherit;
                     }
                 .feed .user-details > .time {
-
+                    line-height: 15px;
+                    font-size: 15px;
                 }
             .feed .post-header > .post-actions {
-
+                grid-area: authorActions;
             }
         .feed > .post > .post-content {
 
         }
         .feed > .post > .post-footer {
-
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 0 10px;
         }
+            .feed .post-footer > .row {
+                padding: 10px;
+                border-top: 1px solid #ccc;
+            }
 
 @media (max-width: 800px) {
     body {
