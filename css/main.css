@@ -92,8 +92,91 @@ img {
                 grid-area: authorActions;
             }
         .feed > .post > .post-content {
-
+            display: grid;
+            grid-template-columns: 1fr;
         }
+            .feed .post-content > p {
+                padding: 10px;
+                font-size: 17px;
+                line-height: 22px;
+            }
+                .feed .post-content > p.big-text {
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+                .feed .post-content > p.background {
+                    height: 300px;
+                    padding: 40px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .feed .post-content > p.red {
+                    background-color: tomato;
+                    color: #fff;
+                }
+                .feed .post-content > p.orange {
+                    background-color: orange;
+                    color: #fff;
+                }
+            .feed .post-content > .gallery {
+                width: 100%;
+                height: 250px;
+                position: relative;
+            }
+                .feed .gallery > img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                .feed .gallery.gallery-2 {
+                    height: 300px;
+                }
+                    .feed .gallery.gallery-2 > img {
+                        width: 50%;
+                        float: left;
+                    }
+                .feed .gallery.gallery-3 {
+                    height: 350px;
+                }
+                    .feed .gallery.gallery-3 > img {
+                        width: 50%;
+                        height: 50%;
+                        float: left;
+                    }
+                    .feed .gallery.gallery-3 > img:first-child {
+                        width: 100%;
+                    }
+                .feed .gallery.gallery-4 {
+                    height: 400px;
+                }
+                    .feed .gallery.gallery-4 > img {
+                        width: 50%;
+                        height: calc(100% / 3);
+                        float: left;
+                    }
+                    .feed .gallery.gallery-4 > img:first-child {
+                        height: 100%;
+                    }
+                .feed .gallery > .extra {
+                    display: none;
+                }
+                .feed .gallery.gallery-4 > .extra {
+                    display: inline-block;
+                    width: 50%;
+                    height: calc(100% / 3);
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #333c;
+                    color: #fff;
+                    font-size: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
         .feed > .post > .post-footer {
             display: grid;
             grid-template-columns: 1fr;

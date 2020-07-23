@@ -170,6 +170,19 @@ const posts = [
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
             background: 'red'
         }
+    },
+    {
+        author: {
+            photo: 'wonder-woman.jpg',
+            name: 'Wonder',
+            lastname: 'Woman',
+            link: 'wonder-woman'
+        },
+        postTimestamp: 1495402689570,             // miliseconds nuo 1970-01-01 00:00:00
+        content: {
+            text: 'Lorem ipsum',
+            background: 'orange'
+        }
     }
 ];
 
