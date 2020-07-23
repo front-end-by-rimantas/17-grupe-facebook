@@ -100,6 +100,14 @@ img {
                 font-size: 17px;
                 line-height: 22px;
             }
+                .feed p > .read-more,
+                .feed p > .read-less {
+                    color: #36f;
+                    cursor: pointer;
+                }
+                .feed .post-content > p.hidden {
+                    display: none;
+                }
                 .feed .post-content > p.big-text {
                     font-size: 30px;
                     line-height: 40px;
