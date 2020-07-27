@@ -1,3 +1,5 @@
+import timestampToTimeAgo from './timestampToTimeAgo.js';
+
 function renderPostHeader( user, timestamp ) {
     return `<div class="post-header">
                 <a href="${user.link}" class="user-profile-photo">
@@ -7,7 +9,7 @@ function renderPostHeader( user, timestamp ) {
                     <div class="author">
                         <a href="${user.link}" class="link">${user.name} ${user.lastname}</a>
                     </div>
-                    <div class="time">${timestamp} ago</div>
+                    <div class="time">${timestampToTimeAgo(timestamp)}</div>
                 </div>
                 <div class="post-actions">...</div>
             </div>`;
